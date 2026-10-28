@@ -10,6 +10,17 @@ total_marks = 180          # underscores can separate words
 studentName = "Mina"       # valid, but snake_case is the usual Python style
 student_age = 20            # letters and an underscore make a valid identifier
 
+# `sum` is a valid identifier and the name of a built-in function.
+print("Is 'sum' a valid identifier?", "sum".isidentifier())
+scores = [80, 90, 100]
+score_total = sum(scores)
+print("Scores:", scores)
+print("Total score:", score_total)
+
+sum = 10  # This is valid, but it replaces the built-in function `sum` with a number.
+print("sum after reassignment:", sum)
+# Avoid `sum = 10`: it would replace the built-in function with a number.
+
 # Python identifiers are case-sensitive: these are three different names.
 value = 1
 Value = 2
