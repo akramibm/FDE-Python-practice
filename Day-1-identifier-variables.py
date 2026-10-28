@@ -8,6 +8,7 @@ _score = 95                # may start with an underscore
 student2 = "Ravi"          # may contain digits after the first character
 total_marks = 180          # underscores can separate words
 studentName = "Mina"       # valid, but snake_case is the usual Python style
+student_age = 20            # letters and an underscore make a valid identifier
 
 # Python identifiers are case-sensitive: these are three different names.
 value = 1
@@ -16,7 +17,17 @@ VALUE = 3
 print("Case-sensitive values:", value, Value, VALUE)
 
 # Invalid identifier examples (kept as strings so this file still runs)
-invalid_names = ["2student", "first name", "total-marks", "class"]
+
+
+invalid_names = [
+	"2student",     # starts with a digit
+	"3rd_place",    # starts with a digit
+	"first name",   # contains a space
+	"total-marks",  # contains a hyphen
+	"price$",       # contains special character
+	"class",        # Python keyword
+	"for",          # Python keyword
+]
 print("\nIdentifier checks:")
 for identifier in invalid_names:
 	is_valid = identifier.isidentifier() and not keyword.iskeyword(identifier)
